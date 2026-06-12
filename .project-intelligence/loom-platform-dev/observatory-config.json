@@ -1,0 +1,44 @@
+{
+  "_schema": "loom-observatory-config v0",
+  "events_logged": [
+    "claude_code_session_started",
+    "user_prompt_submitted",
+    "pre_tool_use",
+    "post_tool_use",
+    "stop",
+    "session_ended",
+    "friction_corrected (when memory_write fires for a feedback memory)",
+    "upskilling_pass_emitted (when the agent emits the end-of-session report)",
+    "test_run_logged"
+  ],
+  "metadata_dimensions": [
+    "project_id (always loom-platform-dev)",
+    "session_id (from CC)",
+    "tool_name (per hook event)",
+    "outcome (success | error | timeout)",
+    "active_file (if in scope)",
+    "branch_name"
+  ],
+  "destination": {
+    "otlp_endpoint": "${OTEL_EXPORTER_OTLP_ENDPOINT} (from .env)",
+    "platform_observatory": "the-loom Project Observatory (Grafana Cloud)",
+    "dashboard_filter": "project_id=loom-platform-dev"
+  },
+  "pattern_detection_triggers": {
+    "repeated_correction": {
+      "shape": "operator corrects the same class of mistake 3+ times in N sessions",
+      "threshold": 3,
+      "action_at_threshold": "Emit a candidate to promotion-candidates/; consider promoting to a discipline-plugin rule"
+    },
+    "repeated_dev_task_shape": {
+      "shape": "agent performs the same multi-step sequence of edits across 3+ sessions",
+      "threshold": 3,
+      "action_at_threshold": "Surface to operator; if confirmed pattern, write a skill candidate for promotion to platform"
+    },
+    "showcase_pattern": {
+      "shape": "a UI/integration pattern the site is supposed to demonstrate is built ad-hoc",
+      "threshold": 1,
+      "action_at_threshold": "Surface to the operator with a note that the same pattern should be exposed as a live demo on the deployed site"
+    }
+  }
+}

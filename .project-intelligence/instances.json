@@ -1,0 +1,29 @@
+{
+  "_schema": "loom-instance-manifest v0",
+  "_description": "Top-level manifest of the project-local Agency-to-Structure Engine instances in this repo. Per the three-layer model, loom-platform has one instance today (the dev-time agent that builds the site). Future surfaces (e.g., a hosted production agent visitors can chat with) would each get their own instance ID and their own folder. Instances MUST NOT share memory or context with each other.",
+  "core_engine_source": "Lizo-RoadTown/Make_Skills (core + adapters)",
+  "platform": "Lizo-RoadTown/the-loom",
+  "instances": [
+    {
+      "id": "loom-platform-dev",
+      "surface": "developer-facing",
+      "where_it_runs": "Inside the operator's Claude Code sessions when they open this repo to build the site",
+      "adapter": "development",
+      "watches": [
+        "Next.js + Auth.js + Postgres scaffolding tasks",
+        "integration patterns with the-loom MCP",
+        "integration patterns with Make_Skills engine endpoints",
+        "agent mistakes during site construction",
+        "architecture corrections",
+        "naming patterns",
+        "module boundaries",
+        "demo-build patterns the site itself will showcase"
+      ],
+      "memory_tag": "loom-platform-dev",
+      "boundary": "Developer-facing agency only. If a future production instance (e.g., loom-platform-prod) is added for the deployed site's embedded agent, it MUST NOT share memory or context with this instance."
+    }
+  ],
+  "registration_status": {
+    "loom-platform-dev": "pending — POST https://loom-project-registry.onrender.com/projects"
+  }
+}

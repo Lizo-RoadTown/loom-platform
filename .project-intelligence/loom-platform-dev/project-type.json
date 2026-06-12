@@ -1,0 +1,10 @@
+{
+  "_schema": "loom-project-type v0",
+  "project_type": "software-development",
+  "instance_surface": "developer-facing",
+  "loom_project_id": "loom-platform-dev",
+  "loom_display_name": "Loom Platform — Developer Repo Instance",
+  "loom_description": "Developer-facing instance for building the official loom platform site. Watches dev tasks while the operator constructs the Next.js + Auth.js + Postgres app on top of the seed. The site itself is a consumer of the loom platform it describes — every demo-build pattern this instance observes is also a demo the deployed site will showcase.",
+  "scope": "single-developer (operator, ad-hoc dev sessions)",
+  "related_instance": null
+}

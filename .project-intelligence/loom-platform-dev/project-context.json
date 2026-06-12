@@ -1,0 +1,31 @@
+{
+  "_schema": "loom-project-context v0",
+  "repo_local_path": "C:\\Users\\Liz\\loom-platform",
+  "git_origin": "https://github.com/Lizo-RoadTown/loom-platform.git",
+  "visibility": "public",
+  "stack": {
+    "frontend": "Next.js 16 (App Router, React 19, Tailwind v4) — planned",
+    "backend": "Next.js API routes + optional Render-hosted services — planned",
+    "auth": "Auth.js v5 (HS256 JWT) — planned",
+    "db": "Postgres (Render hosted, Docker local) — planned",
+    "orm": "Drizzle — planned",
+    "telemetry": "Sentry @sentry/nextjs ^10.x — planned",
+    "deploy": "Vercel (frontend); Render (any backend services) — planned"
+  },
+  "key_files": {
+    "claude_md": "CLAUDE.md",
+    "readme": "README.md",
+    "env_template": ".env.template",
+    "instance_manifest": ".project-intelligence/instances.json"
+  },
+  "current_state_2026_06_12": {
+    "seed_committed": "yes (web-starter seed + customized README + .env.template + .project-intelligence)",
+    "nextjs_scaffold": "not yet initialized",
+    "auth_wiring": "not yet wired",
+    "memory_mcp_wiring": "via .mcp.json (will land when site code starts)",
+    "pillar_2_page": "deferred to Phase 6 per the ratified upskilling sequence",
+    "render_or_vercel_deploy": "not yet configured"
+  },
+  "active_dev_focus": "Project is seeded but the Next.js app + site content have not been built yet. The Pillar 2 upskilling page is the natural first feature once the-loom's Phases 0-5 (Stop-hook upskilling enforcement, candidate registry, local observer, cross-project detection, Make_Skills bridge_receiver implementation, Policy Service) ship.",
+  "role_in_loom_set": "Public-facing site for the loom platform. Demonstrates the architecture by being a consumer of it (reads from the-loom MCP for cross-project state; integrates with Make_Skills engine endpoints when those come online; runs its own .project-intelligence/ instance just like every other consumer)."
+}
