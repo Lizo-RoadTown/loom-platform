@@ -10,7 +10,7 @@ A web app being built from the `web-starter` template. Stack: **Next.js 16 + Aut
 
 ```text
 /plugin marketplace add Lizo-RoadTown/claude-skills-marketplace
-/plugin install make-skills-discipline@lizo-skills
+/plugin install loom-discipline@lizo-loom
 ```
 
 PROBE before asserting (cite file:line). Distinguish dev-tooling from runtime (`platform/api/` + `app/` = runtime; `scripts/` + `docs/` = dev-tooling). Save corrections as feedback memory.
