@@ -25,10 +25,23 @@ PROBE before asserting (cite file:line). Distinguish dev-tooling from runtime (`
 | Errors | `@sentry/nextjs ^10.x` | Next 16 needs Sentry 10; the v8.x line is incompatible |
 | Deploy | Vercel + Render | |
 
-## Skills you can lean on
+## Canonical patterns (operator's patterns library)
 
-- `skills/agentic-skill-design`, `deep-research-pattern`, `design-evaluation`, `documentation`, `document-parsing`, `eval-deep-research`, `infrastructure-mapping`, `layered-explanation`, `next-actions-planning`
-- `skills_private/agentic-upskilling`, `lessons-learned`, `proposal-authoring`, `orchestration-cataloging`, `roadmap-maintenance`, `web-app-scaffold`, `open-source-documentation`
+The canonical home for reusable agents + skills + tools is the `liz-patterns` plugin in the operator's Claude Code marketplace. Install once per machine:
+
+```text
+/plugin marketplace add Lizo-RoadTown/claude-skills-marketplace
+/plugin install liz-patterns@lizo-skills
+```
+
+This makes the following available **by name in every project**, with one canonical implementation:
+
+- **Agents** (invoke via `Agent({subagent_type: "liz-patterns:<name>", ...})`):
+  `infrastructure-mapping`, `next-actions-planning`, `lessons-learned`, `orchestration-cataloging`, `eval-deep-research`, `web-app-scaffold`, `agentic-upskilling`
+- **Skills** (invoke via Skill tool with `liz-patterns:<name>`):
+  `agentic-skill-design`, `deep-research-pattern`, `design-evaluation`, `documentation`, `document-parsing`, `layered-explanation`, `open-source-documentation`, `proposal-authoring`
+
+**Do not look for these patterns in this repo's `skills/` directory** — they don't live here. They live in the plugin. Per [tapestry/MANIFESTO.md Pillar 1](https://github.com/Lizo-RoadTown/tapestry/blob/main/MANIFESTO.md): every reusable pattern has ONE name, ONE home, available everywhere via reference, not copy.
 
 ## Memory hierarchy
 
