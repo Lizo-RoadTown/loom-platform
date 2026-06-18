@@ -1,0 +1,64 @@
+{
+  "timestamp": "2026-06-18T06:59:18.687279+00:00",
+  "git_sha": "99615ae33d60fcd97ad678af636aa53e0c967265",
+  "repo_root": "C:\\Users\\Liz\\loom-platform",
+  "render": {
+    "present": false
+  },
+  "node": {
+    "present": false
+  },
+  "python": {
+    "present": false
+  },
+  "mcp": {
+    "present": false
+  },
+  "auth": {
+    "present": false
+  },
+  "inventory": {
+    "present": true,
+    "directories": [
+      {
+        "name": "docs",
+        "file_count_depth_1": 0,
+        "subdir_count": 1
+      },
+      {
+        "name": "scripts",
+        "file_count_depth_1": 2,
+        "subdir_count": 0
+      },
+      {
+        "name": "skills",
+        "file_count_depth_1": 0,
+        "subdir_count": 0
+      },
+      {
+        "name": "skills_private",
+        "file_count_depth_1": 0,
+        "subdir_count": 0
+      }
+    ],
+    "notable_files": [
+      {
+        "name": ".env.template",
+        "type": "file"
+      },
+      {
+        "name": ".project-intelligence",
+        "type": "dir"
+      },
+      {
+        "name": "CLAUDE.md",
+        "type": "file"
+      },
+      {
+        "name": "README.md",
+        "type": "file"
+      }
+    ]
+  },
+  "shape": "docs-only"
+}
